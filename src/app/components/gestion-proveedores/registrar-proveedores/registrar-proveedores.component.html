@@ -1,0 +1,199 @@
+<form [formGroup]="this.gestionProvService.FormularioRegistroProv" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+
+        <div class="input-group">
+
+            <div class="input-group-text bg-light">
+
+                <i class="fa fa-address-card" [class.blue-icon]="Identificacion.valid"></i>
+
+            </div>
+
+            <input type="hidden" name="IdProveedor">
+            <input type="text" name="Identificacion"  formControlName="Identificacion" class="form-control" placeholder="Documento del Proveedor">
+
+        </div>
+
+
+    </div>
+
+
+    <!------------------------------------------------------------------>
+
+    <div class="row">
+
+        <div class="form-group col-md-5">
+
+            <div class="input-group-prepend">
+
+                <div class="input-group-text bg-light">
+
+                    <i class="fa fa-user-circle" [class.blue-icon]="Nombre.valid"></i>
+
+                </div>
+
+                <input type="text" name="Nombre" formControlName="Nombre" class="form-control" placeholder="Nombre del Proveedor">
+
+            </div>
+
+
+        </div>
+
+
+        <!------------------------------------------------------------------>
+
+        <div class="form-group">
+
+            <div class="input-group-prepend">
+
+                <div class="input-group-text bg-light">
+
+                    <i class="fa fa-user-circle" [class.blue-icon]="Apellido.valid"></i>
+
+                </div>
+
+                <input type="text" name="Apellido" formControlName="Apellido" class="form-control" placeholder="Apellido del Proveedor">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!------------------------------------------------------------------>
+
+    <div class="row">
+
+        <div class="form-group col-md-5">
+
+            <div class="input-group-prepend">
+
+                <div class="input-group-text bg-light">
+
+                    <i class="fa fa-globe" [class.blue-icon]="Pais.valid"></i>
+
+                </div>
+
+                <input type="text" name="Pais" formControlName="Pais" class="form-control" placeholder="Pais del Proveedor">
+
+            </div>
+
+
+        </div>
+
+
+        <!------------------------------------------------------------------>
+
+        <div class="form-group">
+
+            <div class="input-group-prepend">
+
+                <div class="input-group-text bg-light">
+
+                    <i class="fa fa-building"></i>
+
+                </div>
+
+                <input type="text" name="Ciudad" formControlName="Ciudad" class="form-control" placeholder="Ciudad del Proveedor">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!------------------------------------------------------------------>
+
+    <div class="form-group">
+
+        <div class="input-group-prepend">
+
+            <div class="input-group-text bg-light">
+
+                <i class="fa fa-building"></i>
+
+            </div>
+
+            <input type="text" name="Direccion" formControlName="Direccion" class="form-control" placeholder="Direccion del Proveedor">
+
+        </div>
+
+
+    </div>
+
+
+    <!------------------------------------------------------------------>
+
+    <div class="row">
+
+        <div class="form-group col-md-5">
+
+            <div class="input-group-prepend">
+
+                <div class="input-group-text bg-light">
+
+                    <i class="fa fa-envelope-square"></i>
+
+                </div>
+
+                <input type="text" name="Email" formControlName="Email" class="form-control" placeholder="Email del Proveedor">
+
+            </div>
+
+
+        </div>
+
+
+        <!------------------------------------------------------------------>
+
+        <div class="form-group">
+
+            <div class="input-group-prepend">
+
+                <div class="input-group-text bg-light">
+
+                    <i class="fa fa-phone"></i>
+
+                </div>
+
+                <input type="number" name="Celular" formControlName="Celular" class="form-control" placeholder="Celular del Proveedor">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!------------------------------------------------------------------>
+
+
+    <div class="form-group">
+
+        <div class="input-group-prepend">
+
+            <div class="input-group-text bg-light">
+
+                <i class="fa fa-phone"></i>
+
+            </div>
+
+            <input type="number" name="Telefono" formControlName="Telefono" class="form-control" placeholder="Telefono del Proveedor">
+
+        </div>
+
+
+    </div>
+
+
+<!------------------------------------------------------------------>
+
+    <div class="form-group">
+        <button class="btn btn-success" [disabled]="this.gestionProvService.FormularioRegistroProv.invalid" type="submit"> <i class="fa fa-save"> Aceptar </i></button>
+    </div>
+
+</form>

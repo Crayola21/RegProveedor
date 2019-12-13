@@ -1,0 +1,39 @@
+<table>
+
+    <thead>
+
+        <tr>
+            <th scope="col">Identificacion</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Email</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Telefono</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor="let proveedor of gestionProvService.listaproveedor">
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Identificacion}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Nombre}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Apellido}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Pais}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Ciudad}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Direccion}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Email}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Celular}}</td>
+            <td (click)="llenarformularioproveedor(proveedor)">{{proveedor.Telefono}}</td>
+            <td> <i (click)="eliminarproveedor(proveedor.IdProveedor)" class="fa fa-trash fa-lg text-danger"></i></td>
+
+
+        </tr>
+
+
+    </tbody>
+
+</table>
